@@ -60,7 +60,7 @@ nav,
 section {
   margin: 0;
   padding: 0;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 input,
@@ -198,12 +198,14 @@ a:active {
   display: block;
   clear: both;
 }
-.vm:after {
-  content: '';
-  width: 0;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
+.vm {
+    &:after{
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .bgWhite {
@@ -251,4 +253,43 @@ a:active {
 }
 .border-deep-gray {
   border 3px solid #AFA9A9  
+}
+.page-btn {
+  @extend .vm;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #BFBFBF;
+  background: linear-gradient(180deg, #F5F7FE, #D0CCCC, #CECCCC);
+  margin-left: 10px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.p-title {
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  color: #000;
+}
+.input {
+  border: 1px solid black;
+  border-radius: 3px;  
+  width: 100px;
+  height: 20px;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.line-col-gray {
+  width: 80%;
+  height: 1px;
+  background-color: #989898;
+  margin: 30px 0;
+}
+.submit-btn {
+  width: 100px;
+  height: 30px;
+  background: #0075B0;
+  color: #fff;
+  border-radius: 3px;
+  cursor pointer
 }
