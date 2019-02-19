@@ -4,7 +4,9 @@ import store from './store'
 import router from './router'
 import '@/assets/css/reset.styl'
 import '@/assets/css/happycss.css'
+import ElementUI from 'element-ui'
 
+Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 new Vue({
