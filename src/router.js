@@ -6,6 +6,10 @@ import Login from '@/views/login.vue'
 import AddSurvey from '@/views/survey/add.vue'
 import ManageSurvey from '@/views/survey/manage.vue'
 
+import AddCase from '@/views/case/add.vue'
+import ManageCase from '@/views/case/manage.vue'
+import StatisCase from '@/views/case/statis.vue'
+
 let router = new Router({
   routes: [
     {
@@ -22,6 +26,21 @@ let router = new Router({
       path: '/manageSurvey',
       name: 'ManageSurvey',
       component: ManageSurvey
+    },
+    {
+      path: '/addCase',
+      name: 'AddCase',
+      component: AddCase
+    },
+    {
+      path: '/manageCase',
+      name: 'ManageCase',
+      component: ManageCase
+    },
+    {
+      path: '/statisCase',
+      name: 'StatisCase',
+      component: StatisCase
     },
   ]
 })

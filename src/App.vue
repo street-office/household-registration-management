@@ -57,15 +57,15 @@ export default {
           child: [
             {
               cTitle: '新增个案服务',
-              routerPath: ''
+              routerPath: '/addCase'
             },
             {
               cTitle: '管理个案服务',
-              routerPath: ''
+              routerPath: '/manageCase'
             },
             {
               cTitle: '个案服务统计',
-              routerPath: ''
+              routerPath: '/statisCase'
             },
           ]
         },
