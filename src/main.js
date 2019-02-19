@@ -5,9 +5,11 @@ import router from './router'
 import '@/assets/css/reset.styl'
 import '@/assets/css/happycss.css'
 import ElementUI from 'element-ui'
+import Axios from '@/assets/js/axios'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+Vue.prototype.$axios = Axios
 
 new Vue({
   store,
