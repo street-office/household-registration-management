@@ -24,7 +24,9 @@
             <span v-if="path1">&gt;{{path1}}</span>
             <span v-if="path2">&gt;{{path2}}</span>
           </div>
-          <router-view/>
+          <div class="border-blue">
+            <router-view/>
+          </div>
         </div>
       </section>
     </div>
@@ -92,7 +94,7 @@ export default {
         },
         {
           title: '数据查询',
-          routerPath: ''
+          routerPath: '/search'
         }
       ],
     }
@@ -115,6 +117,7 @@ export default {
       this.navList.forEach(item => {
         if (item.routerPath === this.routerPath) {
           this.path1 = item.title
+          this.path2 = null
         }
         item.child && item.child.forEach(childItem => {
           if (childItem.routerPath == this.routerPath) {

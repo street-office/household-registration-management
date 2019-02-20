@@ -5,7 +5,7 @@
       <div @click="showIndex = 0" class="page-btn">家庭信息</div>
       <div @click="showIndex = index + 1" class="page-btn" v-for="(item, index) in pageList" :key="index">成员{{index + 1}}</div>
     </div>
-    <div v-show="showIndex === -1">
+    <div class="ml30" v-show="showIndex === -1">
       <div>
         <div class="p-title mt20 mb10">接案</div>
         <span>个案类型:</span>
@@ -24,8 +24,8 @@
         <div class="btn">结案</div>
       </div>
     </div>
-    <Family v-show="showIndex === 0"/>
-    <FamilyPeople v-for="(item, index) in pageList" :key="index" v-show="showIndex === index + 1"/>
+    <Family class="ml30" v-show="showIndex === 0"/>
+    <FamilyPeople class="ml30" v-for="(item, index) in pageList" :key="index" v-show="showIndex === index + 1"/>
   </div>
 </template>
 <script>

@@ -10,6 +10,8 @@ import AddCase from '@/views/case/add.vue'
 import ManageCase from '@/views/case/manage.vue'
 import StatisCase from '@/views/case/statis.vue'
 
+import Search from '@/views/data/search.vue'
+
 let router = new Router({
   routes: [
     {
@@ -41,6 +43,11 @@ let router = new Router({
       path: '/statisCase',
       name: 'StatisCase',
       component: StatisCase
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
     },
   ]
 })

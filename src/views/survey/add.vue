@@ -5,8 +5,8 @@
       <div @click="showIndex = index + 1" class="page-btn" v-for="(item, index) in pageList" :key="index">成员{{index + 1}}</div>
       <div class="page-btn" @click="pageList.push({})">+</div>
     </div>
-    <Family v-show="showIndex === 0"/>
-    <FamilyPeople v-for="(item, index) in pageList" :key="index" v-show="showIndex === index + 1"/>
+    <Family class="pl30" v-show="showIndex === 0"/>
+    <FamilyPeople class="pl30" v-for="(item, index) in pageList" :key="index" v-show="showIndex === index + 1"/>
     <button @click="addFamliy" class="submit-btn">提交</button>
   </div>
 </template>

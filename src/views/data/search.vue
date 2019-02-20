@@ -1,31 +1,8 @@
 <template>
   <div class="h400">
-    <div class="tr pt3 flex jce aic">
-      <el-date-picker
-        v-model="startTime"
-        class="choose-time"
-        size="mini"
-        type="month"
-        placeholder="开始时间">
-      </el-date-picker>
-      -
-      <el-date-picker
-        v-model="endTime"
-        class="choose-time"
-        type="month"
-        size="mini"
-        placeholder="结束时间">
-      </el-date-picker>
-      <input type="text" class="input w80 ml30" placeholder="经办人">
-      <button class="btn border-black mr40 ml10">查询</button>
-    </div>
+    <div class="p-title mt15 ml10 mb5">查询结果</div>
     <table>
-        <tr>
-          <th colspan="4">基本情况统计</th>
-          <th colspan="6">个案管理类别统计</th>
-          <th colspan="3">接案类别统计</th>
-        </tr>
-        <tr>
+        <tr class="head">
           <td>新管理个案数</td>
           <td>处理中个案数</td>
           <td>结案个案数</td>
@@ -81,5 +58,10 @@ td {
   border: 1px solid #000;
   text-align: center;
 }
+.head {
+  td {
+    background: #E7E6E6;
 
+  }
+}
 </style>
