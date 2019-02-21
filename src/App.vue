@@ -76,7 +76,7 @@ export default {
           child: [
             {
               cTitle: '新增通告',
-              routerPath: ''
+              routerPath: '/addAnnouncement'
             },
             {
               cTitle: '通告审批',

@@ -12,6 +12,8 @@ import StatisCase from '@/views/case/statis.vue'
 
 import Search from '@/views/data/search.vue'
 
+import AddAnnouncement from '@/views/announcement/add.vue'
+
 let router = new Router({
   routes: [
     {
@@ -48,6 +50,11 @@ let router = new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/addAnnouncement',
+      name: 'AddAnnouncement',
+      component: AddAnnouncement
     },
   ]
 })

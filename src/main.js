@@ -6,6 +6,7 @@ import '@/assets/css/reset.styl'
 import '@/assets/css/happycss.css'
 import ElementUI from 'element-ui'
 import Axios from '@/assets/js/axios'
+require('es6-promise').polyfill()
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false

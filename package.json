@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.5.4",
+    "es6-promise": "^4.2.6",
     "happycss": "^0.3.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
@@ -37,8 +38,7 @@
       "eslint:recommended"
     ],
     "rules": {},
-    "parserOptions": {
-    }
+    "parserOptions": {}
   },
   "postcss": {
     "plugins": {
