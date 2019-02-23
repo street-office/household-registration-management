@@ -80,11 +80,11 @@ export default {
             },
             {
               cTitle: '通告审批',
-              routerPath: ''
+              routerPath: '/approval'
             },
             {
               cTitle: '通告修改',
-              routerPath: ''
+              routerPath: '/edit'
             },
             {
               cTitle: '通告查询',

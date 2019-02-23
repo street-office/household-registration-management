@@ -48,9 +48,10 @@
 .mr40 { margin-right: 40px; }
 .mt15 { margin-top: 15px; }
 .mb5 { margin-bottom: 5px; }
-.f24 { font-size: 24px; }
 .f18 { font-size: 18px; }
-.w30 { width: 30px; }
-.w50 { width: 50px; }
 .w60 { width: 60px; }
 .mt5 { margin-top: 5px; }
+.mr10 { margin-right: 10px; }
+.w400 { width: 400px; }
+.mr0 { margin-right: 0px; }
+.w100p { width: 100%; }

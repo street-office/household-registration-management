@@ -13,6 +13,8 @@ import StatisCase from '@/views/case/statis.vue'
 import Search from '@/views/data/search.vue'
 
 import AddAnnouncement from '@/views/announcement/add.vue'
+import Approval from '@/views/announcement/approval.vue'
+import Edit from '@/views/announcement/edit.vue'
 
 let router = new Router({
   routes: [
@@ -55,6 +57,16 @@ let router = new Router({
       path: '/addAnnouncement',
       name: 'AddAnnouncement',
       component: AddAnnouncement
+    },
+    {
+      path: '/approval',
+      name: 'Approval',
+      component: Approval
+    },
+    {
+      path: '/edit',
+      name: 'Edit',
+      component: Edit
     },
   ]
 })
