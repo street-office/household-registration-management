@@ -88,7 +88,7 @@ export default {
             },
             {
               cTitle: '通告查询',
-              routerPath: ''
+              routerPath: '/searchAddAnnouncement'
             },
           ]
         },

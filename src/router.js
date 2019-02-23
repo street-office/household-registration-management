@@ -15,6 +15,7 @@ import Search from '@/views/data/search.vue'
 import AddAnnouncement from '@/views/announcement/add.vue'
 import Approval from '@/views/announcement/approval.vue'
 import Edit from '@/views/announcement/edit.vue'
+import SearchAddAnnouncement from '@/views/announcement/search.vue'
 
 let router = new Router({
   routes: [
@@ -67,6 +68,11 @@ let router = new Router({
       path: '/edit',
       name: 'Edit',
       component: Edit
+    },
+    {
+      path: '/searchAddAnnouncement',
+      name: 'SearchAddAnnouncement',
+      component: SearchAddAnnouncement
     },
   ]
 })

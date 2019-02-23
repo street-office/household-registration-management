@@ -5,11 +5,19 @@
       <div class="w50p mmt20">
         <div>
           <span>所属居委：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.neighborhood" class="input" type="text"> -->
+          <select v-model="family.neighborhood" placeholder="请选择">
+            <option
+              v-for="item in neighborhoods"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
         <div>
           <span>户籍地址：</span>
-          <input class="input w200" type="text">
+          <input v-model="family.registryAddress" class="input w200" type="text">
         </div>
         <div>
           <span>居住地址：</span>
@@ -17,25 +25,57 @@
         </div>
         <div>
           <span>家庭类别：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.homeType" class="input" type="text"> -->
+          <select v-model="family.homeType" placeholder="请选择">
+            <option
+              v-for="item in homeTypes"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
       </div>
       <div class="w50p mmt20">
         <div>
           <span>户籍人数：</span>
-          <input class="input" type="text">
+          <!-- <input class="input" type="text"> -->
+          <select v-model="family.num" placeholder="请选择">
+            <option
+              v-for="item in nums"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
         <div>
           <span>户籍情况：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.registryCondition" class="input" type="text"> -->
+          <select v-model="family.registryCondition" placeholder="请选择">
+            <option
+              v-for="item in registryConditions"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
         <div>
           <span>联系电话：</span>
-          <input class="input" type="text">
+          <input v-model="family.phone" class="input" type="text">
         </div>
         <div>
           <span>困难程度：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.difficut" class="input" type="text"> -->
+          <select v-model="family.difficut" placeholder="请选择">
+            <option
+              v-for="item in difficuts"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -45,29 +85,107 @@
       <div class="w20p mmt20">
         <div>
           <span>低保：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.disabledMan" class="input" type="text"> -->
+          <select v-model="family.low" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
         <div>
           <span>特困供养：</span>
-          <input class="input" type="text">
+          <!-- <input v-model="family.specPoor" class="input" type="text"> -->
+          <select v-model="family.specPoor" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
         <div>
           <span>困境儿童：</span>
-          <input class="input" type="text">
+          <select v-model="family.poorChild" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>残疾人补贴：</span>
+          <select v-model="family.disabledMan" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>廉租房补贴：</span>
+          <select v-model="family.lowRent" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
       </div>
       <div class="w20p mmt20">
         <div>
           <span>金额：</span>
-          <input class="input" type="text">
+          <input v-model="family.lowMoney" class="input" type="text">
         </div>
         <div>
           <span>金额：</span>
-          <input class="input" type="text">
+          <input v-model="family.specPoorMoney" class="input" type="text">
         </div>
         <div>
           <span>金额：</span>
-          <input class="input" type="text">
+          <input v-model="family.poorChildMoney" class="input" type="text">
+        </div>
+        <div>
+          <span>金额：</span>
+          <input v-model="family.disabledManMoney" class="input" type="text">
+        </div>
+        <div>
+          <span>金额：</span>
+          <input v-model="family.lowRentMoney" class="input" type="text">
+        </div>
+      </div>
+      <div class="w20p mmt20 ml50">
+        <div>
+          <span>低收入:</span>
+          <!-- <input v-model="family.lowMoney" class="input" type="text"> -->
+          <select v-model="family.lowIn" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>支出型贫困:</span>
+          <select v-model="family.specPoorOut" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -75,7 +193,35 @@
 </template>
 <script>
 export default {
-  
+  data() {
+    return {
+      family: {
+        difficut: '',
+        disabledMan: '',
+        disabledManMoney: '',
+        homeType: '',
+        poorChild: '',
+        specPoor: '',
+        specPoorMoney: '',
+        registryCondition: '',
+        registryAddress: '',
+        phone: '',
+        neighborhood: '',
+        num: '',
+        low: '',
+        lowIn: '',
+        lowRent: '',
+        lowRentMoney: '',
+        specPoorOut: '',
+      },
+      neighborhoods: ['兰州', '金鹏', '姚家桥', '吴家浜', '辽新', '辽二1', '大花园', '海上海', '陈一', '陈二', '陈三', '张家浜', '阳明', '辽昆', '五环', '又一村', '大连路', '蒋家浜', '辽三', '辽四', '辽二2', '星泰', '金上海', '辽一', '恒阳'],
+      nums: [1, 2, 3, 4, 5, 6, 7],
+      registryConditions: ['正常', '人户分离', '空挂户'],
+      difficuts: ['一般困境', '中度困境', '重度困境'],
+      homeTypes: ['从业人员家庭', '零从业家庭'],
+      yesOrNo: ['是', '否'],
+    }
+  },
 }
 </script>
 <style lang="stylus" scoped>
