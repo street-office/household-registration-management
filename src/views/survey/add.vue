@@ -34,7 +34,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .submit-btn {
-  margin: 30px 0;
+  margin: 10px 50px 30px;
 }
 </style>
 

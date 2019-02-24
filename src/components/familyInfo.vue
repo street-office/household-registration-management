@@ -189,6 +189,54 @@
         </div>
       </div>
     </div>
+    <div class="line-col-gray"></div>
+    <p class="p-title">家庭实物财务申报</p>
+    <div class="flex">
+      <div class="w50p mmt20">
+        <div>
+          <span class="w200 line-block">住房情况申报</span>
+          <span>自有住房:</span>
+          <select v-model="family.ownHouse" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span class="w200 line-block">非居住类房屋情况申报</span>
+          <span>自有非居住类房:</span>
+          <select v-model="family.ownOutHouse" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span class="w200 line-block">机动车辆及车辆申报</span>
+          <span>自有机动车辆:</span>
+          <select v-model="family.ownCar" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="line-col-gray"></div>
+    <p class="p-title">调查目的</p>
+    <textarea v-model="family.inquireGoal"></textarea>
+    <!-- <div class="line-col-gray"></div> -->
+    <p class="p-title">调查情况</p>
+    <textarea v-model="family.inquireCondition"></textarea>
   </div>
 </template>
 <script>
@@ -213,6 +261,9 @@ export default {
         lowRent: '',
         lowRentMoney: '',
         specPoorOut: '',
+        ownCar: '',
+        inquireCondition: '',
+        inquireGoal: '',
       },
       neighborhoods: ['兰州', '金鹏', '姚家桥', '吴家浜', '辽新', '辽二1', '大花园', '海上海', '陈一', '陈二', '陈三', '张家浜', '阳明', '辽昆', '五环', '又一村', '大连路', '蒋家浜', '辽三', '辽四', '辽二2', '星泰', '金上海', '辽一', '恒阳'],
       nums: [1, 2, 3, 4, 5, 6, 7],
@@ -222,6 +273,11 @@ export default {
       yesOrNo: ['是', '否'],
     }
   },
+  methods: {
+    getFamily() {
+      return this.family
+    }
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -233,4 +289,10 @@ export default {
     margin-top: 10px;  
   }  
 }
+textarea {
+  width 90%
+  height 100px
+  margin 20px 0
+}
+
 </style>
