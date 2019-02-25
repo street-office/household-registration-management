@@ -37,7 +37,6 @@
 .w200 { width: 200px; }
 .w20p { width: 20%; }
 .ml50 { margin-left: 50px; }
-.w30p { width: 30%; }
 .mt20 { margin-top: 20px; }
 .mb100 { margin-bottom: 100px; }
 .w90 { width: 90px; }
@@ -58,5 +57,4 @@
 .f18 { font-size: 18px; }
 .w60 { width: 60px; }
 .mt5 { margin-top: 5px; }
-.m500 { margin: 500px; }
-.m50 { margin: 50px; }
+.w30p { width: 30%; }
