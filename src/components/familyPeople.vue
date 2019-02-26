@@ -20,7 +20,7 @@
         </div>
         <div>
           <span>人户分离：</span>
-          <select placeholder="请选择">
+          <select v-model="people.leave" placeholder="请选择">
             <option
               v-for="item in yesOrNo"
               :key="item"
@@ -191,6 +191,10 @@
             </option>
           </select>
         </div>
+        <div>
+          <span>录入人：</span>
+          <input class="input" v-model="people.operateName" type="text" >
+        </div>
       </div>
     </div>
     <div class="line-col-gray"></div>
@@ -212,8 +216,112 @@
           <input v-model="people.workMoney" placeholder="可选填" class="input" type="text">
         </div>
         <div>
-          <span>工资性收入：</span>
-          <input v-model="people.workMoney" placeholder="可选填" class="input" type="text">
+          <span>享受政策：</span>
+          <input v-model="people.enjoy" placeholder="可选填" class="input" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="line-col-gray"></div>
+    <p class="p-title">社会保险情况</p>
+    <div class="flex">
+      <div class="w30p mmt20">
+        <div>
+          <span>医疗保险：</span>
+          <select v-model="people.healthInsurance" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>互助帮扶保险：</span>
+          <select v-model="people.helpInsurance" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="w30p mmt20">
+        <div>
+          <span>居民保险：</span>
+          <select v-model="people.homeInsurance" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>城镇职工养老保险：</span>
+          <select v-model="people.workOldInsurance" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="line-col-gray"></div>
+    <p class="p-title">健康状况</p>
+    <div class="flex">
+      <div class="w30p mmt20">
+        <div>
+          <span>健康状况：</span>
+          <select v-model="people.health" placeholder="请选择">
+            <option
+              v-for="item in healths"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>残疾状况：</span>
+          <select v-model="people.poorHealth" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="w30p mmt20">
+        <div>
+          <span>大重病：</span>
+          <select v-model="people.bigSickness" placeholder="请选择">
+            <option
+              v-for="item in bigSicknesss"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
+        </div>
+        <div>
+          <span>残疾等级：</span>
+          <select v-model="people.poorRank" placeholder="请选择">
+            <option
+              v-for="item in yesOrNo"
+              :key="item"
+              :label="item"
+              :value="item">
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -232,6 +340,10 @@ export default {
       marriages: ['未婚', '已婚', '离异', '丧偶', '再婚'],
       sexs: ['男', '女'],
       nations: ['汉族', '少数民族'],
+      healths: ['正常', '一般', '慢性病', '急性病'],
+      poorHealths: ['听力', '视力', '精神', '智力', '言语', '肢体'],
+      poorRank: ['一级', '二级', '三级', '四级'],
+      bigSicknesss: ['恶性肿瘤', '尿毒症', '精神病'],
       people: {
         "assistanceCouple": "",
         "bigSickness": "",
@@ -277,6 +389,11 @@ export default {
         "workOldInsurance": ""
       },
     }
+  },
+  methods: {
+    getPeople() {
+      return this.people
+    },
   },
 }
 </script>
