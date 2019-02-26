@@ -1,6 +1,8 @@
 <template>
   <div>
-    <header class="h80 c-fff f26 vm cblue">江浦路街道困难家庭个案管理系统 <span class="f20">v2.0</span></header>
+    <header class="h80 c-fff f26 vm cblue">
+      <img class="img-logo" src="@/assets/imgs/img_logo.png" alt="">
+      江浦路街道困难家庭个案管理系统 <span class="f20">v2.0</span></header>
     <div class="flex">
       <aside class="w220 border-gray pb200">
         <div class="blank-gray"></div>
@@ -159,7 +161,12 @@ export default {
     border-top-right-radius 15px
   }
 }
-
+.img-logo {
+  width 40px
+  vertical-align middle
+  margin-left 30px
+  margin-right 10px
+}
 
 
 </style>

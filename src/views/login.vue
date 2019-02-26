@@ -1,15 +1,17 @@
 <template>
   <div class="wrapper">
-    <p class="f20">江浦路街道困难家庭个案管理系统</p>
-    <div class="flex fdc aic tc w300">
-      <p class="c-2B7BFF bold f30">登 录</p>
-      <input class="input" type="text" placeholder="输入用户名">
-      <input class="input" type="text" placeholder="输入密码">
-      <div class="pr">
-        <input class="input code" type="text" placeholder="输入验证码">
-        <div class="get-code c-2B7BFF w100 pointer">获取验证码</div>
+    <div class="form">
+      <p class="f18 c-fff">江浦路街道困难家庭个案管理系统v2.0</p>
+      <div class="flex fdc aic tc w300 form-content">
+        <p class="c-2B7BFF bold f30">登 录</p>
+        <input class="input" type="text" placeholder="输入用户名">
+        <input class="input" type="text" placeholder="输入密码">
+        <div class="pr">
+          <input class="input code" type="text" placeholder="输入验证码">
+          <div class="get-code c-2B7BFF w100 pointer">获取验证码</div>
+        </div>
+        <div @click="login" class="login-btn vm pointer">马上登录</div>
       </div>
-      <div @click="login" class="login-btn vm pointer">马上登录</div>
     </div>
   </div>
 </template>
@@ -29,7 +31,20 @@ export default {
   top 0
   width 100vw
   height 100vh
-  background #fff
+  background url('../assets/imgs/img_bgd_logo.png')
+  background-size cover
+
+  .form {
+    position absolute
+    right 8%
+    top 25%
+
+    .form-content {
+      background-color #fff
+      padding 15px 0 30px
+      margin-top 10px
+    }
+  }
 }
 .input {
   border 1px solid #F1F2F2
