@@ -40,6 +40,7 @@
 .h20 { height: 20px; }
 .ml30 { margin-left: 30px; }
 .mb10 { margin-bottom: 10px; }
+.mr10 { margin-right: 10px; }
 .mt30 { margin-top: 30px; }
 .w70 { width: 70px; }
 .ml20 { margin-left: 20px; }
@@ -54,7 +55,6 @@
 .mr30 { margin-right: 30px; }
 .h30 { height: 30px; }
 .w50 { width: 50px; }
-.mr10 { margin-right: 10px; }
 .w60 { width: 60px; }
 .mt5 { margin-top: 5px; }
 .c-FF2D25 { color: #FF2D25; }

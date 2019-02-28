@@ -35,8 +35,6 @@ export default {
       })
       this.$axios.post('/home/addCondition', family)
         .then(res => {
-          // this.$message.success('添加成功!')
-          console.log(res)
           if (res.message == 'SUCCESS') {
             alert('添加成功!')
           } else {
