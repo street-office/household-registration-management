@@ -49,11 +49,11 @@
         label="性别">
       </el-table-column>
       <el-table-column
-        prop="date"
+        prop="phone"
         label="联系方式">
       </el-table-column>
       <el-table-column
-        prop="name"
+        prop="liveAddress"
         label="居住地址">
       </el-table-column>
       <el-table-column
