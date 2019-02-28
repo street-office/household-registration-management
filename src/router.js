@@ -1,7 +1,9 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-Vue.use(Router)
+// import Vue from 'vue'
+// import Router from 'vue-router'
+let Vue = window.Vue
+let Router = window.VueRouter
 
+Vue.use(Router)
 import Login from '@/views/login.vue'
 import AddSurvey from '@/views/survey/add.vue'
 import ManageSurvey from '@/views/survey/manage.vue'

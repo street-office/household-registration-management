@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" id="loginWrapper" :style="{backgroundImage: 'url(' + bg + ')'}">
     <div class="form">
       <p class="f18 c-fff">江浦路街道困难家庭个案管理系统v2.0</p>
       <div class="flex fdc aic tc w300 form-content">
@@ -17,9 +17,21 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      bg: require('../assets/imgs/img_bgd_logo1.jpg')
+    }
+  },
   methods: {
     login() {
       this.$router.push('/addSurvey')
+    }
+  },
+  created() {
+    let img = new Image()
+    img.src = require('../assets/imgs/img_bgd_logo.png')
+    img.onload = () => {
+      this.bg = require('../assets/imgs/img_bgd_logo.png')
     }
   },
 }
@@ -31,7 +43,6 @@ export default {
   top 0
   width 100vw
   height 100vh
-  background url('../assets/imgs/img_bgd_logo.png')
   background-size cover
 
   .form {

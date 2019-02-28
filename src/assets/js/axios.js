@@ -1,4 +1,4 @@
-import axios from 'axios'
+let axios = window.axios
 
 // axios 配置
 axios.defaults.timeout = 100000
