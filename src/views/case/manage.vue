@@ -36,7 +36,7 @@
         width="50"
         >
         <template slot-scope="scope">
-          <el-checkbox :key="scope.row.id" v-model="scope.row.isChecked"></el-checkbox>
+          <input type="checkbox" :key="scope.row.id" v-model="scope.row.isChecked">
           <!-- <input :label="checkbox[scope.$index]" v-model="checkbox[scope.$index]" type="checkbox" class="checkbox"> -->
         </template>
       </el-table-column>
@@ -74,7 +74,7 @@
       </el-table-column>
     </el-table>
     <div class="mt20 mb100">
-      <div class="btn w90 tc h20 vm fl">删除选择记录</div>
+      <div @click="remove" class="btn w90 tc h20 vm fl">删除选择记录</div>
       <div class="fr">总共{{total}}条记录 共{{pageCount}}页 当前第{{pageNum}}页 
         <span @click="prePage" class="pointer"> 上一页 </span>
         <span @click="nextPage" class="pointer"> 下一页 </span>
@@ -100,8 +100,22 @@ export default {
     }
   },
   methods: {
+    remove() {
+      let idStr = []
+      this.tableData.forEach((item) => {
+        if (item.isChecked) {
+          idStr.push(item.id)
+        }
+      })
+      this.$axios.post('/cases/deleteCases', {
+        delIds: idStr.join(',')
+      }).then(res => {
+        alert('删除成功!')
+        this.filterTableData()
+      })
+    },
     searchData() {
-      this.$axios.post('/home/query', this.search)
+      this.$axios.post('/cases/queryCases', this.search)
         .then(res => {
           if (res.message == 'SUCCESS') {
             this.totalData = res.obj.list
@@ -115,7 +129,12 @@ export default {
     filterTableData() {
       let startIndex = (this.pageNum - 1) * this.pageSize
       let endIndex = this.pageNum * this.pageSize
-      this.tableData = this.totalData.slice(startIndex, endIndex)
+      let arr = this.totalData.slice(startIndex, endIndex)
+      arr.forEach(item => {
+        item.isChecked = false
+      })
+      console.log(arr)
+      this.tableData = arr 
     },
     prePage() {
       if (this.pageNum > 1) {
